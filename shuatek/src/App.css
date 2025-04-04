@@ -1,0 +1,104 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+    /* General Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Background Image */
+    body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      transition: background 0.3s ease-in-out;
+    }
+
+    /* Section Styles */
+    .block {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      height: auto; /* Allow height to adjust based on content */
+      min-height: 100vh; /* Ensure minimum height remains full viewport */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      padding: 20px; /* Add padding for better readability */
+      box-sizing: border-box; /* Include padding in height/width calculations */
+      word-wrap: break-word; /* Ensure long words break to fit */
+      margin: 20px;
+    }
+
+    .block:nth-child(1) { 
+      background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Warm gradient */
+      color: #fff; /* White text for contrast */
+    }
+    .block:nth-child(2) { 
+      background: linear-gradient(135deg, #6a11cb, #2575fc); /* Cool gradient */
+      color: #fff; 
+    }
+    .block:nth-child(3) { 
+      background: linear-gradient(135deg, #43cea2, #185a9d); /* Green-blue gradient */
+      color: #fff; 
+    }
+
+    /* Animation Class */
+    .block.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .block {
+        font-size: 1.5rem;
+        padding: 20px;
+        text-align: center;
+      }
+    }
